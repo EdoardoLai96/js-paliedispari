@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
-h1{
+body{
+    background-color:coral;
+}
+
+h1, h2{
     text-align: center;
+}
+h1{
+    margin-bottom: 2rem;
+    color:crimson;
+    text-shadow: 2px black;
+}
+
+div{
+text-align: center;
+
 }

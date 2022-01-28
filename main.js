@@ -17,42 +17,50 @@ let scatolaReverse = "";
 
 // confronto in due valori 
 
-parola = "";
 
 
-function palindroMania(){
+
+
+function verifica_se_palindroma(una_certa_parola){
     
-    let parola = prompt("");
+    let risultato = "";
     
-    for (let i = 0; i < parola.length; i++){
+    for (let i = 0; i < una_certa_parola.length; i++){
         
         
-        scatola += parola[i];
+        scatola += una_certa_parola[i];
         
     }
-
+    
     console.log(scatola);
     
-    for (let i = parola.length - 1; i >= 0; i--){
+    for (let i = una_certa_parola.length - 1; i >= 0; i--){
         
-        scatolaReverse += parola[i];
+        scatolaReverse += una_certa_parola[i];
         
         
     }
     
     if(scatola == scatolaReverse){
         
-
-        risultato = alert("palindroma")
-
+        risultato = "Palindroma";
+        
     }else{
-
-        alert("non palindroma");
+        
+        risultato = "Non palindroma";
     }
     
-    return
+    
+    
+    
+    return risultato
     
 }
 
 
-let controllo = palindroMania(parola);
+
+parola_da_verificare = prompt("");
+
+verifica = verifica_se_palindroma(parola_da_verificare)
+
+console.log(verifica);
