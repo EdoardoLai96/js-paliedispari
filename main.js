@@ -32,7 +32,6 @@ function verifica_se_palindroma(una_certa_parola){
         
     }
     
-    console.log(scatola);
     
     for (let i = una_certa_parola.length - 1; i >= 0; i--){
         
@@ -50,7 +49,8 @@ function verifica_se_palindroma(una_certa_parola){
         risultato = "non è palindroma";
     }
     
-    
+    scatola ="";
+    scatolaReverse= "";
     
     
     return risultato
@@ -70,10 +70,22 @@ function verifica_se_palindroma(una_certa_parola){
 bottone.addEventListener("click", 
 
 function() {
-     let verifica = verifica_se_palindroma(parola_da_verificare.value);
-     let mostra_risultato = document.getElementById("mostra_risultato");
-     mostra_risultato.innerHTML = ("La parola che hai scelto " + verifica)
+    
+    isNaN(parola_da_verificare.value) == true;
+
+    let verifica = verifica_se_palindroma(parola_da_verificare.value);
+    
+    if(parola_da_verificare.value == "" || isNaN(parola_da_verificare.value) == false){
+        
+        
+        alert("Errore, non hai inserito un valore corretto")
+    } else {
+        let mostra_risultato = document.getElementById("mostra_risultato");
+        mostra_risultato.innerHTML = ("La parola che hai scelto " + verifica)
+        
+    }
     bottone.innerHTML="Verifica un'altra parola";
+    
     }
     )
 
