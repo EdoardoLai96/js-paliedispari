@@ -21,3 +21,15 @@ div{
 text-align: center;
 
 }
+
+#bottone{
+    margin: 1rem 0;
+}
+
+.opacity-1{
+    opacity: 1;
+}
+
+#bottone_verifica{
+display: none;
+}

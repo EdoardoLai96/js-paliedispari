@@ -43,11 +43,11 @@ function verifica_se_palindroma(una_certa_parola){
     
     if(scatola == scatolaReverse){
         
-        risultato = "Palindroma";
+        risultato = "è palindroma";
         
     }else{
         
-        risultato = "Non palindroma";
+        risultato = "non è palindroma";
     }
     
     
@@ -59,8 +59,28 @@ function verifica_se_palindroma(una_certa_parola){
 
 
 
-parola_da_verificare = prompt("");
 
-verifica = verifica_se_palindroma(parola_da_verificare)
 
-console.log(verifica);
+
+// parola_da_verificare = prompt("");
+
+ let parola_da_verificare = document.getElementById("parola");
+
+
+bottone.addEventListener("click", 
+
+function() {
+     let verifica = verifica_se_palindroma(parola_da_verificare.value);
+     let mostra_risultato = document.getElementById("mostra_risultato");
+     mostra_risultato.innerHTML = ("La parola che hai scelto " + verifica)
+    bottone.innerHTML="Verifica un'altra parola";
+    }
+    )
+
+
+
+// verifica = verifica_se_palindroma(parola_da_verificare)
+
+
+
+
